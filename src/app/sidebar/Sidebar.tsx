@@ -49,9 +49,6 @@ export default function Sidebar() {
                             <Link className="border-b py-6" href="/main/certificate">
                                 Certificate
                             </Link>
-                            <Link className="border-b py-6" href="/main/projects">
-                                Projects
-                            </Link>
                             <Link className="border-b py-6" href="/main/skills">
                                 Skills
                             </Link>
