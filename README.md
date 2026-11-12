@@ -1,41 +1,54 @@
-<<<<<<< HEAD
-# Portfólio
-About Me
-=======
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Paulo Andre de Souza — Professional Portfolio
 
-## Getting Started
+A bilingual portfolio presenting my experience in **Customer Success**, **technical onboarding**, **full-stack software development** and **AI-assisted automation**.
 
-First, run the development server:
+## Profile
+
+I work at the intersection of customer-facing technology and software engineering. My background includes technical support, software development, sales development and customer success, alongside independent software and IT support work.
+
+## Live portfolio
+
+[Visit my published portfolio](https://portfolio-bd410.web.app/main/)
+
+## Technology
+
+- Next.js 15 / React 19 / TypeScript
+- Tailwind CSS
+- Hosted separately from this source repository
+
+## Sections
+
+- **About:** professional introduction and selected work
+- **Experience:** roles and responsibilities
+- **Skills:** customer success, engineering, infrastructure and automation
+- **Certifications:** verified course certificates stored under `public/c_certificate/`
+- **Contact:** professional profiles and contact information
+
+## Run locally
 
 ```bash
+npm ci
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+To create an optimized production build:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+npm start
+```
 
-## Learn More
+## Adding certificates
 
-To learn more about Next.js, take a look at the following resources:
+1. Place the PDF in `public/c_certificate/`.
+2. Add a record to the `certificates` array in `src/app/main/certificate/page.tsx`.
+3. Include the official title, issuer, date and duration only when verified against the certificate.
+4. Check that the PDF does not expose private identifiers before publishing.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Privacy and ownership
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This portfolio does not publish proprietary employer source code, customer information, internal reports or confidential commercial metrics. Work-related achievements are described without revealing protected details.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
->>>>>>> 82c68af (Initial commit from Create Next App)
+[GitHub](https://github.com/PauloSouza123) · [LinkedIn](https://www.linkedin.com/in/paulo-souza-896242328/)
