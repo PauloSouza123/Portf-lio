@@ -9,12 +9,12 @@ const skillGroups = [
   {
     heading: "Backend & APIs",
     summary: "Engineering and integration of practical software solutions.",
-    skills: ["Java", "Spring Boot", "Python", "REST APIs", "SQL", "PostgreSQL", "MySQL", "Database maintenance"],
+    skills: ["Java", "Spring Boot", "Python", "PHP", "REST APIs", "SQL", "PostgreSQL", "MySQL", "Database maintenance"],
   },
   {
     heading: "Frontend & Web",
     summary: "Modern web interfaces and application development.",
-    skills: ["JavaScript", "TypeScript", "React", "Next.js", "HTML", "CSS", "Tailwind CSS"],
+    skills: ["JavaScript", "TypeScript", "React", "Next.js", "HTML", "CSS", "Tailwind CSS", "Vue.js", "Angular"],
   },
   {
     heading: "AI & Automation",
@@ -24,7 +24,7 @@ const skillGroups = [
   {
     heading: "Infrastructure & Security",
     summary: "Troubleshooting, deployment and secure technical operations.",
-    skills: ["Git", "GitHub", "Docker", "Linux", "Windows", "macOS", "Technical support", "Cybersecurity fundamentals"],
+    skills: ["Git", "GitHub", "GitLab", "Docker", "AWS fundamentals", "Linux", "Shell Script", "Windows", "macOS", "Nmap", "Wireshark", "Burp Suite", "Technical support", "Cybersecurity fundamentals"],
   },
   {
     heading: "Communication & Leadership",
