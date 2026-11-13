@@ -1,6 +1,6 @@
 # Paulo Andre de Souza — Professional Portfolio
 
-A bilingual portfolio presenting my experience in **Customer Success**, **technical onboarding**, **full-stack software development** and **AI-assisted automation**.
+An English-first portfolio with a bilingual introduction presenting my experience in **Customer Success**, **technical onboarding**, **full-stack software development** and **AI-assisted automation**.
 
 ## Profile
 
@@ -21,7 +21,7 @@ I work at the intersection of customer-facing technology and software engineerin
 - **About:** professional introduction and selected work
 - **Experience:** roles and responsibilities
 - **Skills:** customer success, engineering, infrastructure and automation
-- **Certifications:** verified course certificates stored under `public/c_certificate/`
+- **Certifications:** 19 archived and new courses, with issuer verification links and existing PDF records
 - **Contact:** professional profiles and contact information
 
 ## Run locally
@@ -42,7 +42,7 @@ npm start
 
 ## Adding certificates
 
-1. Place the PDF in `public/c_certificate/`.
+1. Place the PDF in `public/c_certificate/` (see `docs/CERTIFICATES.md` for the 13 new uploads).
 2. Add a record to the `certificates` array in `src/app/main/certificate/page.tsx`.
 3. Include the official title, issuer, date and duration only when verified against the certificate.
 4. Check that the PDF does not expose private identifiers before publishing.
