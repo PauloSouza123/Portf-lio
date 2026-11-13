@@ -34,6 +34,16 @@ const experience = [
     ],
   },
   {
+    title: "Technical Installation & IT Infrastructure",
+    organisation: "Tecnovel · Brazil",
+    period: "Mar 2020 – Aug 2020",
+    points: [
+      "Installed and configured CCTV cameras, sensors and electronic systems.",
+      "Supported networking, cabling, server setup and related IT infrastructure.",
+      "Provided technical assistance for connected equipment and electronic systems.",
+    ],
+  },
+  {
     title: "Freelance IT Support & Software Development",
     organisation: "Independent · Brazil",
     period: "2022 – Dec 2024",
