@@ -1,80 +1,92 @@
 import Sidebar from "@/app/sidebar/Sidebar";
 
-export default function Services() {
-    return (
-        <div className="relative left-[280px] w-[calc(100%-280px)] p-[30px] bg-gray-100 min-h-[100vh] text-gray-900 h-[100vh]">
-            <Sidebar/>
-            <div className="flex flex-col ">
-                    <section className="min-h-screen bg-gray-100 py-16 px-6 md:px-20">
-      <h2 className="text-4xl font-bold text-center text-gray-800 mb-12">Serviços</h2>
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        
-        {/* Serviço 1 */}
-        <div className="bg-white rounded-2xl shadow-lg p-6">
-          <h3 className="text-xl font-semibold text-indigo-600 mb-2">
-            Assistência Técnica e Suporte para Empresas (Freelancer)
-          </h3>
-          <p className="text-gray-600 text-sm mb-1">
-            <strong>Clientes:</strong> Autoescolas, Supermercados, Lojas de Eletrônicos
-          </p>
-          <p className="text-gray-600 text-sm mb-4">
-            <strong>Período:</strong> 2023 – 2024
-          </p>
-          <ul className="list-disc list-inside text-gray-700 text-sm space-y-1">
-            <li>Manutenção de computadores, câmeras, alarmes, gateways e servidores</li>
-            <li>Suporte a sistemas próprios das empresas</li>
-            <li>Diagnóstico e manutenção em sistemas operacionais</li>
-            <li>Formatação e recuperação de máquinas</li>
-            <li>Detecção de vulnerabilidades e remoção de malwares</li>
-          </ul>
-        </div>
+const experience = [
+  {
+    title: "Customer Success",
+    organisation: "Capturama (formerly MyFoodSite)",
+    period: "Sep 2026 – Present",
+    points: [
+      "Deliver client onboarding and product training, including sessions conducted in English.",
+      "Support product adoption, customer retention, plan renewals and account expansion.",
+      "Identify upsell opportunities and negotiate with customers within authorised responsibilities.",
+      "Contribute to churn reduction and workflow improvements, without disclosing confidential business metrics.",
+      "Promote the practical use of AI tools and automation to help customers improve their workflows.",
+    ],
+  },
+  {
+    title: "Sales Development Representative (SDR)",
+    organisation: "Capturama (formerly MyFoodSite)",
+    period: "Nov 2025 – Feb 2026",
+    points: [
+      "Qualified prospective customers and identified relevant commercial opportunities.",
+      "Prepared prospect reports and communicated product value and plan options.",
+      "Supported the customer journey from initial interest towards commercial handover.",
+    ],
+  },
+  {
+    title: "Technical Support / Software Developer",
+    organisation: "Capturama (formerly MyFoodSite)",
+    period: "Feb 2025 – Oct 2025",
+    points: [
+      "Provided technical support and troubleshooting for software and customer-facing systems.",
+      "Worked on web features, APIs, databases, deployment and bug resolution.",
+      "Contributed to technical projects and suggested workflow automation improvements.",
+    ],
+  },
+  {
+    title: "Technical Installation & IT Infrastructure",
+    organisation: "Tecnovel · Brazil",
+    period: "Mar 2020 – Aug 2020",
+    points: [
+      "Installed and configured CCTV cameras, sensors and electronic systems.",
+      "Supported networking, cabling, server setup and related IT infrastructure.",
+      "Provided technical assistance for connected equipment and electronic systems.",
+    ],
+  },
+  {
+    title: "Freelance IT Support & Software Development",
+    organisation: "Independent · Brazil",
+    period: "2022 – Dec 2024",
+    points: [
+      "Diagnosed and maintained computers, operating systems and software for clients.",
+      "Provided technical support and delivered programming solutions for practical business needs.",
+      "Recommended and helped customers adopt CRM systems and other digital tools.",
+    ],
+  },
+];
 
-        {/* Serviço 2 */}
-        <div className="bg-white rounded-2xl shadow-lg p-6">
-          <h3 className="text-xl font-semibold text-indigo-600 mb-2">
-            Técnico de Instalações em Telefonia
-          </h3>
-          <p className="text-gray-600 text-sm mb-1">
-            <strong>Empresa:</strong> Tecnovel
+export default function Experience() {
+  return (
+    <>
+      <Sidebar />
+      <main className="min-h-screen bg-slate-950 px-6 py-12 text-slate-100 sm:px-10 md:ml-[260px] md:py-20 lg:px-16">
+        <div className="mx-auto max-w-4xl">
+          <p className="text-sm font-semibold uppercase tracking-widest text-sky-300">Professional background</p>
+          <h1 className="mt-3 text-4xl font-bold tracking-tight">Experience</h1>
+          <p className="mt-5 leading-8 text-slate-400">
+            A career across customer success, sales development, technical support and software engineering.
+            Capturama was previously known as MyFoodSite. Roles are presented separately to show their actual dates.
           </p>
-          <p className="text-gray-600 text-sm mb-4">
-            <strong>Período:</strong> Março de 2020 – Agosto de 2020
-          </p>
-          <ul className="list-disc list-inside text-gray-700 text-sm space-y-1">
-            <li>Instalação de câmeras, sensores e caixas registradoras</li>
-            <li>Configuração de amplificadores e sistemas de som</li>
-            <li>Montagem de redes, servidores e cabeamento</li>
-            <li>Suporte a sistemas eletrônicos e infraestrutura</li>
-          </ul>
-        </div>
 
-        {/* Serviço 3 */}
-        <div className="bg-white rounded-2xl shadow-lg p-6 flex flex-col justify-between">
-          <div>
-            <h3 className="text-xl font-semibold text-indigo-600 mb-2">
-              Desenvolvedor Full-Stack, SDR e Suporte Técnico
-            </h3>
-            <p className="text-gray-600 text-sm mb-1">
-              <strong>Empresa:</strong> Capturama
-            </p>
-            <p className="text-gray-600 text-sm mb-4">
-              <strong>Período:</strong> Fevereiro de 2024 – Atualmente
-            </p>
-            <ul className="list-disc list-inside text-gray-700 text-sm space-y-1">
-              <li>Desenvolvimento de sprints com foco em automações</li>
-              <li>Treinamento e suporte técnico a clientes</li>
-              <li>Correção de bugs e melhorias em sistema</li>
-              <li>Prospecção de leads e venda de upgrades</li>
-              <li>Tráfego pago, assessoria iFood e gestão operacional</li>
-            </ul>
+          <div className="mt-10 space-y-6">
+            {experience.map((role) => (
+              <article key={role.title} className="rounded-2xl border border-slate-800 bg-slate-900/70 p-6 sm:p-8">
+                <div className="flex flex-wrap items-baseline justify-between gap-2">
+                  <h2 className="text-xl font-bold">{role.title}</h2>
+                  <span className="text-sm font-medium text-sky-300">{role.period}</span>
+                </div>
+                <p className="mt-2 font-medium text-slate-400">{role.organisation}</p>
+                <ul className="mt-5 list-disc space-y-3 pl-5 leading-7 text-slate-300">
+                  {role.points.map((point) => <li key={point}>{point}</li>)}
+                </ul>
+              </article>
+            ))}
           </div>
-          {/* Link do contrato */}
-
+          <p className="mt-8 text-sm text-slate-500">
+            Work has included independent service agreements. Client names, proprietary code and company financial data are not disclosed.
+          </p>
         </div>
-        
-      </div>
-    </section>
-            </div>
-        </div>
-    );
+      </main>
+    </>
+  );
 }

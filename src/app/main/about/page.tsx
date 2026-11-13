@@ -1,69 +1,120 @@
 "use client";
 
-import Sidebar from "@/app/sidebar/Sidebar";
 import { useState } from "react";
-import Image from "next/image";
+import Link from "next/link";
+import Sidebar from "@/app/sidebar/Sidebar";
+
+const copy = {
+  en: {
+    eyebrow: "Based in Brazil · Open to international opportunities",
+    title: "Bridging software engineering, customer success and AI.",
+    intro:
+      "I'm Paulo Andre de Souza, a customer-facing technology professional with experience in software development, technical support, sales development and Customer Success.",
+    detail:
+      "At Capturama (formerly MyFoodSite), I've supported technical operations, qualified commercial opportunities and delivered client onboarding and training. I now focus on product adoption, customer relationships, renewals and account growth. I've delivered training in English, led projects and collaborated on initiatives to streamline workflows through automation and AI tools.",
+    background:
+      "From 2022 to 2024, I also worked independently on computer maintenance, software support and programming, helping clients adopt practical technical solutions.",
+    strengths: "What I bring",
+    strengthsItems: [
+      ["Customer success", "Onboarding, customer enablement, renewals, retention and account expansion."],
+      ["Software engineering", "Practical full-stack development, APIs, SQL databases and technical troubleshooting."],
+      ["AI & automation", "Integrating AI into projects and helping customers apply AI tools in their day-to-day work."],
+    ],
+    work: "Featured project",
+    workTitle: "CS Workspace — Customer Success Operations Dashboard",
+    workText:
+      "A full-stack project for organizing follow-ups, tasks and customer success workflows. The public showcase uses illustrative data; the application source remains private.",
+    workLink: "View project showcase",
+    experience: "Explore my experience",
+    certificate: "View certifications",
+    github: "GitHub projects",
+    note: "I communicate professionally in English and am open to relocation opportunities that provide visa sponsorship.",
+    switchLabel: "Ler em português",
+  },
+  pt: {
+    eyebrow: "No Brasil · Aberto a oportunidades internacionais",
+    title: "Conectando engenharia de software, Customer Success e IA.",
+    intro:
+      "Sou Paulo Andre de Souza, profissional de tecnologia com experiência em desenvolvimento de software, suporte técnico, desenvolvimento comercial e Customer Success.",
+    detail:
+      "Na Capturama (antiga MyFoodSite), atuei em operações técnicas, qualificação comercial e treinamento de clientes. Atualmente, meu foco é adoção da plataforma, relacionamento com clientes, renovações e expansão de contas. Já realizei treinamentos em inglês, liderei projetos e contribuí com iniciativas de automação e uso de ferramentas de IA.",
+    background:
+      "Entre 2022 e 2024, também atuei como freelancer em manutenção de computadores, suporte de software e programação, ajudando clientes a adotar soluções tecnológicas.",
+    strengths: "Minhas competências",
+    strengthsItems: [
+      ["Customer Success", "Onboarding, capacitação, renovações, retenção e expansão de contas."],
+      ["Engenharia de software", "Desenvolvimento full-stack, APIs, bancos SQL e diagnóstico de problemas técnicos."],
+      ["IA e automação", "Integração de IA em projetos e orientação prática sobre ferramentas de IA no dia a dia."],
+    ],
+    work: "Projeto em destaque",
+    workTitle: "CS Workspace — Dashboard de Operações de Customer Success",
+    workText:
+      "Projeto full-stack para organização de acompanhamentos, tarefas e rotinas de CS. A apresentação pública utiliza dados ilustrativos, e o código da aplicação permanece privado.",
+    workLink: "Ver apresentação do projeto",
+    experience: "Conhecer minha experiência",
+    certificate: "Ver certificados",
+    github: "Projetos no GitHub",
+    note: "Tenho comunicação profissional em inglês e disponibilidade para oportunidades internacionais com patrocínio de visto.",
+    switchLabel: "Read in English",
+  },
+};
 
 export default function About() {
+  const [language, setLanguage] = useState<"en" | "pt">("en");
+  const t = copy[language];
 
-    const [language, setLanguage] = useState("pt");
+  return (
+    <>
+      <Sidebar />
+      <main className="min-h-screen bg-slate-950 text-slate-100 md:ml-[260px]">
+        <div className="mx-auto max-w-6xl px-6 py-12 sm:px-10 md:py-20 lg:px-16">
+          <div className="flex items-center justify-between gap-4">
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-sky-300">{t.eyebrow}</p>
+            <button
+              type="button"
+              onClick={() => setLanguage(language === "en" ? "pt" : "en")}
+              className="shrink-0 rounded-full border border-slate-700 px-4 py-2 text-xs font-medium text-slate-200 transition hover:border-sky-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-400"
+            >
+              {t.switchLabel}
+            </button>
+          </div>
 
-    const toggleLanguage = () => {
-        setLanguage((prev) => (prev === "pt" ? "en" : "pt"));
-    }
+          <section className="mt-12 max-w-4xl">
+            <h1 className="text-4xl font-bold leading-tight tracking-tight sm:text-5xl lg:text-6xl">{t.title}</h1>
+            <p className="mt-7 text-lg leading-8 text-slate-300">{t.intro}</p>
+            <p className="mt-5 leading-8 text-slate-400">{t.detail}</p>
+            <p className="mt-4 leading-8 text-slate-400">{t.background}</p>
+            <div className="mt-9 flex flex-wrap gap-3">
+              <Link href="/main/services" className="rounded-xl bg-sky-400 px-5 py-3 font-semibold text-slate-950 transition hover:bg-sky-300">{t.experience}</Link>
+              <Link href="/main/certificate" className="rounded-xl border border-slate-600 px-5 py-3 font-medium transition hover:border-sky-400">{t.certificate}</Link>
+            </div>
+          </section>
 
-    const text = {
-    pt: {
-      title: "Sobre Mim",
-      content: `Olá! Meu nome é Paulo Andre de Souza, sou desenvolvedor Full Stack especializado em backend com Java e Spring Boot. Tenho experiência com bancos de dados PostgreSQL, Docker, cron no Linux, AWS e cibersegurança — áreas que estudo e aplico constantemente para criar soluções escaláveis, seguras e eficientes.
+          <section className="mt-20" aria-labelledby="strengths-title">
+            <h2 id="strengths-title" className="text-2xl font-bold">{t.strengths}</h2>
+            <div className="mt-6 grid gap-4 lg:grid-cols-3">
+              {t.strengthsItems.map(([title, description]) => (
+                <article key={title} className="rounded-2xl border border-slate-800 bg-slate-900/70 p-6">
+                  <h3 className="text-lg font-semibold text-sky-300">{title}</h3>
+                  <p className="mt-3 leading-7 text-slate-300">{description}</p>
+                </article>
+              ))}
+            </div>
+          </section>
 
-Atuo também com otimização de plataformas como iFood e desenvolvimento de automações para conversão e fidelização de clientes. No frontend, utilizo tecnologias como React, Next.js e TypeScript, sempre prezando pela performance e experiência do usuário.
+          <section className="mt-20 rounded-3xl border border-slate-700 bg-slate-900 p-7 sm:p-10" aria-labelledby="work-title">
+            <p className="text-sm font-semibold uppercase tracking-widest text-sky-300">{t.work}</p>
+            <h2 id="work-title" className="mt-3 text-2xl font-bold">{t.workTitle}</h2>
+            <p className="mt-4 max-w-3xl leading-8 text-slate-300">{t.workText}</p>
+            <div className="mt-6 flex flex-wrap gap-5">
+              <a className="font-medium text-sky-300 underline underline-offset-4 hover:text-sky-200" href="https://paulosouza123.github.io/DashBoard-CS-showcase/" target="_blank" rel="noopener noreferrer">{t.workLink}</a>
+              <a className="font-medium text-sky-300 underline underline-offset-4 hover:text-sky-200" href="https://github.com/PauloSouza123" target="_blank" rel="noopener noreferrer">{t.github}</a>
+            </div>
+          </section>
 
-Sou movido por desafios e apaixonado por aprender. Trabalho com foco, responsabilidade e dedicação — inclusive fora do expediente — buscando sempre entregar o melhor resultado possível. Meu objetivo é crescer como especialista em backend e segurança, contribuindo com soluções que realmente geram impacto.`
-    },
-    en: {
-      title: "About Me",
-      content: `Hi! I'm Paulo Andre de Souza, a Full Stack Developer specialized in backend development with Java and Spring Boot. I work with PostgreSQL, Docker, Linux cron jobs, AWS, and cybersecurity — fields I study and apply regularly to create scalable, secure, and efficient solutions.
-
-I also optimize platforms like iFood and develop automation tools focused on customer acquisition and retention. On the frontend side, I use technologies like React, Next.js, and TypeScript, always prioritizing performance and user experience.
-
-I'm driven by challenges and passionate about learning. I work with focus, commitment, and dedication — even beyond regular hours — always aiming to deliver the best results. My goal is to grow as a backend and security specialist, contributing to impactful solutions.`
-    },
-    }
-    return (
-        <div className="relative left-[280px] w-[calc(100%-280px)] p-[30px] bg-gray-100 min-h-[110vh] text-gray-900 h-[100vh]">
-            <Sidebar/>
-    <div className="flex flex-col ">
-                <section id="about" className="bg-white py-12 px-4 sm:px-8 md:px-16 min-h-[100vh]">
-      <div className="max-w-4xl mx-auto text-center">
-        <div className="flex justify-end mb-4">
-          <button
-            onClick={toggleLanguage}
-            className="text-sm bg-gray-200 px-3 py-1 rounded hover:bg-gray-300 transition"
-          >
-            {language === "pt" ? "Switch to English 🇺🇸" : "Trocar para Português 🇧🇷"}
-          </button>
+          <p className="mt-14 border-t border-slate-800 pt-6 text-sm leading-7 text-slate-400">{t.note}</p>
         </div>
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-800">
-          {text[language].title}
-        </h2>
-        <p className="text-base md:text-lg text-gray-700 leading-relaxed text-justify whitespace-pre-line">
-          {text[language].content}
-        </p>
-      </div>
-        <div className="flex justify-center items-center w-full h-[300px] min-w-[400px] mt-[30px]">
-      <Image
-            src="/images/tecnologia.jpg"
-            alt="image"
-            width={100}
-            height={100}
-            className="min-w-[400px] w-[600px] mx-4 my-4"
-        />
-        </div>
-
-
-    </section>
-    </div>
-        </div>
-    );
+      </main>
+    </>
+  );
 }

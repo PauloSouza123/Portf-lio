@@ -1,83 +1,51 @@
 import Sidebar from "@/app/sidebar/Sidebar";
-import Image from "next/image";
+
+const links = [
+  {
+    label: "GitHub",
+    value: "PauloSouza123",
+    href: "https://github.com/PauloSouza123",
+  },
+  {
+    label: "LinkedIn",
+    value: "Paulo Andre de Souza",
+    href: "https://www.linkedin.com/in/paulo-souza-896242328/",
+  },
+  {
+    label: "Email",
+    value: "hobtcraft@gmail.com",
+    href: "mailto:hobtcraft@gmail.com",
+  },
+];
 
 export default function Contact() {
   return (
-
-    <div className="relative left-[280px] w-[calc(100%-280px)] p-[30px] bg-[#f5f5f7] min-h-[100vh] text-gray-900 h-[100vh] overflow-auto">
-      <Sidebar/>
-      <div className="flex flex-col w-full justify-center items-center">
-
-        <div className="w-full bg-[#f5f5f7] max-h-[90vh] relative">
-
-          <div className="bg-[url('/images/newyork.jpg')] bg-cover bg-center w-full h-[80vh]">
-
-            <div className="relative text-center text-white">
-              <h1 className="absolute top-[200px] left-[43%] text-[40px]">Contact</h1>
-            </div>
-          
+    <>
+      <Sidebar />
+      <main className="min-h-screen bg-slate-950 px-6 py-12 text-slate-100 sm:px-10 md:ml-[260px] md:py-20 lg:px-16">
+        <div className="mx-auto max-w-3xl">
+          <p className="text-sm font-semibold uppercase tracking-widest text-sky-300">Get in touch</p>
+          <h1 className="mt-3 text-4xl font-bold">Contact</h1>
+          <p className="mt-5 leading-8 text-slate-400">
+            Based in Cascavel, Paraná, Brazil. Available for conversations about technology, software engineering,
+            technical customer success and international career opportunities.
+          </p>
+          <div className="mt-10 space-y-4">
+            {links.map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                target={item.label === "Email" ? undefined : "_blank"}
+                rel={item.label === "Email" ? undefined : "noopener noreferrer"}
+                className="block rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:border-sky-400 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-400"
+              >
+                <span className="block text-sm uppercase tracking-widest text-sky-300">{item.label}</span>
+                <span className="mt-2 block break-all text-lg font-semibold">{item.value}</span>
+              </a>
+            ))}
           </div>
-
-          <div className="absolute flex flex-around w-[800px] h-[400px] bg-gray-500/85 top-[70%] left-1/2 -translate-x-1/2 -translate-y-1/2">
-            <div className="f1-section w-[33.3%] h-[100%] relative">
-              <div className="w-[130px] h-[130px] bg-white rounded-full absolute top-[70px] left-[25%]  ">
-                <Image 
-                  src="/images/linkedin.png"
-                  alt="LinkedIn"
-                  width={40}
-                  height={40}
-                  className="w-full h-full rounded-full"
-                />
-              </div>
-                <div className="text-white text-center mt-[210px] ">
-                  <h2>LinkedIn</h2>
-                <a href="https://www.linkedin.com/in/paulo-souza-896242328/" target="_black" >linkedin.com</a>
-              </div>
-            </div>
-            <div className="f2-section w-[33.3%] h-[100%] relative">
-              <div className="w-[130px] bg-white h-[130px] rounded-full absolute top-[30px] left-[25%] ">
-                <Image 
-                  src="/images/contact.png"
-                  alt="LinkedIn"
-                  width={40}
-                  height={40}
-                  className="w-full h-full rounded-full"
-                />
-              </div>
-                <div className="text-white mt-[180px]">
-                  <h2 className="text-center mb-3">Contact</h2>
-                  <p className="mb-2 ml-4">Name: Paulo Andre de Souza</p>
-                  <p className="mb-2 ml-4">Email: hobtcraft@gmail.com</p>
-                  <p className="mb-2 ml-4">Phone: 45 99851-8156</p>
-                  <p className="mb-2 ml-4">Location: Cacavel-PR</p>
-              </div>
-            </div>
-
-            <div className="f3-section w-[33.3%] h-[100%] relative">
-              <div className="w-[130px] h-[130px] bg-white rounded-full absolute top-[70px] left-[25%] ">
-                <Image 
-                  src="/images/github.jpeg"
-                  alt="LinkedIn"
-                  width={40}
-                  height={40}
-                  className="w-full h-full rounded-full"
-                />
-              </div>
-              <div className="text-white text-center mt-[210px]">
-                <h2>GitHub</h2>
-                <a href="https://github.com/PauloSouza123" target="_blank" >github.com</a>
-              </div>
-            </div>
-          </div>
-
-          <div className="w-full h-[40vh]">
-          
-          </div>
-
         </div>
-
-      </div>
-    </div>
-
+      </main>
+    </>
   );
 }
