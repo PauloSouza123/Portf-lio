@@ -1,6 +1,6 @@
 // Verified against uploaded completion certificates and the original portfolio archive.
 // Preserve the original Portuguese course titles used on the certificates.
-// New certificates link to issuer verification pages; their PDF copies can be added later.
+// The 19 certificates link to their stored PDFs; newer courses also link to issuer verification pages.
 export type CertificateCategory = "Software Development" | "Cybersecurity";
 
 export type Certificate = {
@@ -23,6 +23,7 @@ export const certificates: Certificate[] = [
     "date": "2026-01-22",
     "hours": "77h",
     "category": "Software Development",
+    "pdfPath": "/c_certificate/java-completo-udemy-2026.pdf",
     "verifyUrl": "https://www.udemy.com/certificate/UC-74de62c8-a88f-4f54-bfbc-818cf032c195/",
     "credentialId": "UC-74de62c8-a88f-4f54-bfbc-818cf032c195"
   },
@@ -33,6 +34,7 @@ export const certificates: Certificate[] = [
     "date": "2026-01-29",
     "hours": "9h",
     "category": "Software Development",
+    "pdfPath": "/c_certificate/spring-boot-danki-2026.pdf",
     "verifyUrl": "https://cursos.dankicode.com/validate-certificate",
     "credentialId": "c5b68b40-8f38-4fa8-97e8-97c0ad64ebc7"
   },
@@ -43,6 +45,7 @@ export const certificates: Certificate[] = [
     "date": "2026-02-14",
     "hours": "31h 12m",
     "category": "Software Development",
+    "pdfPath": "/c_certificate/python-algoritmos-solyd-2026.pdf",
     "verifyUrl": "https://solyd.com.br/verificar/Ql3DMqGk3B"
   },
   {
@@ -52,6 +55,7 @@ export const certificates: Certificate[] = [
     "date": "2026-02-18",
     "hours": "46h 40m",
     "category": "Software Development",
+    "pdfPath": "/c_certificate/python-orientado-objetos-solyd-2026.pdf",
     "verifyUrl": "https://solyd.com.br/verificar/vGxpoeOMm8"
   },
   {
@@ -61,6 +65,7 @@ export const certificates: Certificate[] = [
     "date": "2026-03-08",
     "hours": "52h",
     "category": "Cybersecurity",
+    "pdfPath": "/c_certificate/ataques-aplicacoes-web-solyd-2026.pdf",
     "verifyUrl": "https://solyd.com.br/verificar/mYCAnRww8R"
   },
   {
@@ -70,6 +75,7 @@ export const certificates: Certificate[] = [
     "date": "2026-03-16",
     "hours": "26h 40m",
     "category": "Cybersecurity",
+    "pdfPath": "/c_certificate/bug-bounty-solyd-2026.pdf",
     "verifyUrl": "https://solyd.com.br/verificar/HfxOLQTma9"
   },
   {
@@ -79,6 +85,7 @@ export const certificates: Certificate[] = [
     "date": "2026-02-06",
     "hours": "5h 48m",
     "category": "Cybersecurity",
+    "pdfPath": "/c_certificate/criptografia-senhas-solyd-2026.pdf",
     "verifyUrl": "https://solyd.com.br/verificar/o7ZMHpgrNr"
   },
   {
@@ -88,6 +95,7 @@ export const certificates: Certificate[] = [
     "date": "2026-02-12",
     "hours": "13h 20m",
     "category": "Cybersecurity",
+    "pdfPath": "/c_certificate/pentest-infraestrutura-solyd-2026.pdf",
     "verifyUrl": "https://solyd.com.br/verificar/0sKCR4L1hG"
   },
   {
@@ -97,6 +105,7 @@ export const certificates: Certificate[] = [
     "date": "2026-02-04",
     "hours": "3h",
     "category": "Cybersecurity",
+    "pdfPath": "/c_certificate/seguranca-informacao-solyd-2026.pdf",
     "verifyUrl": "https://solyd.com.br/verificar/MLE749r6HX"
   },
   {
@@ -106,6 +115,7 @@ export const certificates: Certificate[] = [
     "date": "2026-02-05",
     "hours": "16h",
     "category": "Cybersecurity",
+    "pdfPath": "/c_certificate/linux-shell-pentest-solyd-2026.pdf",
     "verifyUrl": "https://solyd.com.br/verificar/scFMV252YQ"
   },
   {
@@ -115,6 +125,7 @@ export const certificates: Certificate[] = [
     "date": "2026-03-20",
     "hours": "10h",
     "category": "Cybersecurity",
+    "pdfPath": "/c_certificate/metodologias-pentest-solyd-2026.pdf",
     "verifyUrl": "https://solyd.com.br/verificar/TbqApF5nEG"
   },
   {
@@ -124,6 +135,7 @@ export const certificates: Certificate[] = [
     "date": "2026-02-10",
     "hours": "34h 40m",
     "category": "Cybersecurity",
+    "pdfPath": "/c_certificate/recon-pentest-solyd-2026.pdf",
     "verifyUrl": "https://solyd.com.br/verificar/dY2nYzSfZd"
   },
   {
@@ -133,6 +145,7 @@ export const certificates: Certificate[] = [
     "date": "2026-02-08",
     "hours": "8h 30m",
     "category": "Cybersecurity",
+    "pdfPath": "/c_certificate/redes-pentest-solyd-2026.pdf",
     "verifyUrl": "https://solyd.com.br/verificar/cqYxXqrgFK"
   },
   {

@@ -59,10 +59,8 @@ export default function Certificate() {
             Course titles follow the original certificates.
           </p>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-400">
-            Historical certificates open their existing PDF documents. Newer
-            credentials link to the verification addresses printed on the
-            certificates; the downloadable PDF files will be added to this
-            repository separately.
+            All 19 certificates can be opened as PDF documents. For newer
+            credentials, the cards also provide the issuer verification link.
           </p>
 
           <div className="mt-9 grid gap-4 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-end">
